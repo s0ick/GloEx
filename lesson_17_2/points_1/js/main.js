@@ -1,6 +1,8 @@
 window.addEventListener('DOMContentLoaded', () => {
   'use strict';
   
+  let date = new Date();
+  date.setDate(date.getDate() + 1);
   const countTimet = (deadline) => {
     let timerHours = document.querySelector('#timer-hours'),
         timetMinutes = document.querySelector('#timer-minutes'),
@@ -34,12 +36,11 @@ window.addEventListener('DOMContentLoaded', () => {
       if (timer.timeRemaining > 0) {
         getUpdateClock();
       } else {
-        clearInterval(intervalID);
-        timerHours.textContent = '00';
-        timetMinutes.textContent = '00';
-        timetSeconds.textContent = '00';
+        let dateNow = new Date();
+        dateNow.setDate(date.getDate() + 1);
+        countTimet(dateNow);
       }
     }, 1000);
   };
-  countTimet('22 february 2020');
+  countTimet(date);
 });
