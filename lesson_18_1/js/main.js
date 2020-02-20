@@ -93,6 +93,8 @@ window.addEventListener('DOMContentLoaded', () => {
         popup.style.display = `block`;
         if(screen.width >= 768) {
           flyInterval = requestAnimationFrame(flyAnimate);
+        } else {
+          popupContent.style.left ='30%';
         }
       });
     });      
