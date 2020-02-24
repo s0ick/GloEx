@@ -109,7 +109,7 @@ window.addEventListener('DOMContentLoaded', () => {
           duration = 0.4;
 
     menuItem.forEach((item) => {
-      if(item.href !== 'http://127.0.0.1:5500/lesson_20_1/index.html#') {
+      if(item.href !== 'http://127.0.0.1:5500/lesson_21_1/index.html#') {
         item.addEventListener('click', (e) => {
           let win = window.pageYOffset,
               hash = item.href.replace(/[^#]*(.*)/, '$1'),
@@ -164,7 +164,7 @@ window.addEventListener('DOMContentLoaded', () => {
   };
   getTabs();
 
-  // Add dots for slider
+  // Add dots
   const getDots = () => {
     const slide = document.querySelectorAll('.portfolio-item'),
           dotslist = document.querySelector('.portfolio-dots');
@@ -276,7 +276,7 @@ window.addEventListener('DOMContentLoaded', () => {
       if(!item.classList.contains('calc-type')) {
         item.addEventListener('input', (event) => {
           let target = event.target;
-          target.textContent = target.replace(/[^0-9]/);
+          target.textContent = target.toString().replace(/[^0-9]/);
         });
       }
     });

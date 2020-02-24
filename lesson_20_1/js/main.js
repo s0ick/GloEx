@@ -254,3 +254,33 @@ window.addEventListener('DOMContentLoaded', () => {
   getSlider();
 
 });
+
+// // Change images
+  // const changeImages = () => {
+  //   const commandPhoto = document.querySelectorAll('.command__photo');
+  //   commandPhoto.forEach((item) => {
+  //     let src;
+  //     item.addEventListener('mouseenter', (event) => {
+  //       src = event.target.src;
+  //       event.target.src = event.target.dataset.img;
+  //     });
+  //     item.addEventListener('mouseout', (event) => {
+  //       event.target.src = src;
+  //     });
+  //   });
+  // };
+  // changeImages();
+
+  // // Validation for calculator
+  // const validateForCalc = () => {
+  //   const calcItem = document.querySelectorAll('.calc-item');
+  //   calcItem.forEach((item) => {
+  //     if(!item.classList.contains('calc-type')) {
+  //       item.addEventListener('input', (event) => {
+  //         let target = event.target;
+  //         target.textContent = target.replace(/[^0-9]/);
+  //       });
+  //     }
+  //   });
+  // };
+  // validateForCalc();
