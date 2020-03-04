@@ -438,7 +438,7 @@ window.addEventListener('DOMContentLoaded', () => {
       return fetch('./server.php', {
         method: 'POST',
         headers: {
-          'Content-Type': 'aplication/json'
+          'Content-Type': 'application/x-www-form-urlencoded'
         },
         body: formData
       });
