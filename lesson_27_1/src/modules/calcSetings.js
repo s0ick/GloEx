@@ -17,12 +17,20 @@ const calc = (price = 100) => {
     const typeValue = calcType.options[calcType.selectedIndex].value,
         squareValue = +calcSquare.value;
 
-    if(calcCount.value > 1) countValue += (calcCount.value - 1) / 10;
+    if(calcCount.value > 1) {
+      countValue += (calcCount.value - 1) / 10;
+    }
 
-    if(calcDay.value && calcDay.value < 5) dayValue *= 2;
-    else if(calcDay.value && calcDay.value < 10) dayValue *= 1.5;
+    if(calcDay.value && calcDay.value < 5) {
+      dayValue *= 2;
+    }
+    else if(calcDay.value && calcDay.value < 10) {
+      dayValue *= 1.5;
+    }
 
-    if(typeValue && squareValue) total = Math.floor(price * typeValue * squareValue * countValue * dayValue);
+    if(typeValue && squareValue) {
+      total = Math.floor(price * typeValue * squareValue * countValue * dayValue);
+    }
      
 
     if(total >= 0) {

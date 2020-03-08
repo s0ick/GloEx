@@ -1,14 +1,18 @@
 const changeImages = () => {
-  const commandPhoto = document.querySelectorAll('.command__photo');
-  commandPhoto.forEach((item) => {
-    let src;
-    item.addEventListener('mouseenter', (event) => {
+  const command = document.querySelector('.command');
+  let src;
+  command.addEventListener('mouseover', (event) => {
+    let target = event.target;
+    if(target.tagName === 'IMG') {
       src = event.target.src;
       event.target.src = event.target.dataset.img;
-    });
-    item.addEventListener('mouseout', (event) => {
+    }    
+  });
+  command.addEventListener('mouseout', (event) => {
+    let target = event.target;
+    if(target.tagName === 'IMG') {
       event.target.src = src;
-    });
+    }    
   });
 };
 

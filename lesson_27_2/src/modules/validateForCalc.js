@@ -1,11 +1,10 @@
 const validateForCalc = () => {
-  const calcItem = document.querySelectorAll('.calc-item');
-  calcItem.forEach((item) => {
-    if(!item.classList.contains('calc-type')) {
-      item.addEventListener('input', (event) => {
-        let target = event.target;
-        target.textContent = target.toString().replace(/[^0-9]/);
-      });
+  const calcBlock = document.querySelector('.calc-block');
+  
+  calcBlock.addEventListener('input', event => {
+    let target = event.target;
+    if(!target.classList.contains('calc-type')) {
+    target.textContent = target.toString().replace(/[^0-9]/);
     }
   });
 };
